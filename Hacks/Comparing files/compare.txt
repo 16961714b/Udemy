@@ -1,0 +1,2 @@
+~$ diff -u game_new.js game_old.js
+This is a terminal command that compares 2 files.
