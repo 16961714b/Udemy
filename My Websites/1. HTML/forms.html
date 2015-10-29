@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>My First Webpage</title>
+	<meta charset="utf-8" />
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta name="description" content="A journey of a thousand miles begins with a single step." />
+</head>
+
+<body>
+	<div>
+		<form>
+			<input type="text" value="example" />
+			<br /><br />
+			<input type="text" placeholder="type here..." />
+			<br /><br />
+			
+			<!-- to automatically validate an email address use type="email", so that the browser will check it before the form is submitted -->
+			<input type="email" placeholder="your email" />
+
+			<!-- adding name attributes will allow them to be submitted, check the url -->
+			<input type="email" placeholder="your email" name="email" />
+
+			<br /><br /><br />
+
+			<textarea>Put some content here...</textarea>
+
+			<br /><br /><br />
+
+			<!-- an empty text area -->
+			<textarea></textarea>
+			
+			<br /><br /><br />
+
+			<!-- adding name attributes will allow them to be submitted, check the url -->
+			<textarea name="textarea">Put some content here...</textarea>
+
+			<!-- select options from a dropdown menu -->
+			<select>
+				<option>Select an option</option>
+				<option>1</option>
+				<option>2</option>
+				<option>3</option>
+			</select>
+
+			<br /><br /><br />
+
+			<!-- select options from a dropdown menu -->
+			<select>
+				<option>Select an option</option>
+				<option value="1">1</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+			</select>
+
+			<br /><br /><br />
+
+			<input type="radio" />
+			<!-- only one option selected at one time, we will need to group the options by attributing them the same name, e.g. name="color" -->
+			<input type="radio" name="color" /> Red
+			<input type="radio" name="color" /> Green
+
+			<br /><br /><br />
+
+			<!-- adding name and value attributes will allow them to be submitted, check the url -->
+			<input type="checkbox" name="dog" value="1" /> Dog
+			<input type="checkbox" /> Cat
+			<input type="checkbox" /> Fish
+
+			<br /><br /><br />
+
+			<input type="submit" /> 
+
+			<br /><br /><br />
+
+			<input type="submit" value="Click me!" /> 
+
+
+		</form>
+	</div>	
+</body>
+</html>
+
