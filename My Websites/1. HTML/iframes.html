@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>My First Webpage</title>
+	<meta charset="utf-8" />
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta name="description" content="A journey of a thousand miles begins with a single step." />
+</head>
+
+<body>
+	<div>
+
+		<!-- see the output of the following characters -->
+		<
+		<br />
+		<>
+		<br />
+		<!-- you will not see any output in the browser using <a> -->
+		<a>
+		<br />
+		<!-- use of html entities to type specific characters, e.g. the character entity of "<" less than look like this "&lt;" -->
+		<!-- 
+		character entity begins with "&" and ends with ";"
+
+		&entity_name;
+
+		OR
+
+		&#entity_number;
+		-->
+
+		&lt;a>
+		<br />
+		<!-- html does not recognize more than 1 space between characters, but you can use character entity "&nbsp;" so called non-breaking space to increase the number of spaces --> 		
+		1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;12
+		<br />
+
+	</div>
+
+	<div>
+		<!-- embedding content from internal link -->
+		<iframe src="helloworld.html"></iframe>
+		<br /><br />
+		<!-- embedding content from another web page, external link -->
+		<iframe src="http://www.combinator.se/"></iframe>
+		<br /><br />
+		<!-- embedding content from YouTube -->
+		<iframe width="300" src="https://www.youtube.com/embed/Ytux4IOAR_s?list=PLAwxTw4SYaPk8_-6IGxJtD3i2QAu5_s_p" frameborder="0" allowfullscreen></iframe>
+	</div>
+</body>
+</html>
