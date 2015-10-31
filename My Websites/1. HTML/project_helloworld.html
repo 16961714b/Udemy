@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Hello world!</title>
+	<meta charset="utf-8" />
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body>
+	
+	<!-- embedded youtube video "Debugging webpages with the browser console" by Khan Academy -->
+	<iframe align="right" width="420" height="315" src="https://www.youtube.com/embed/JuVOwU0RcdA" frameborder="0" allowfullscreen></iframe>
+
+	<h1>Hello world!</h1>
+	<h2>Some interesting thoughts on debugging code</h2>
+	
+	<img src="https://upload.wikimedia.org/wikipedia/commons/8/8a/H96566k.jpg" width="350" />
+	
+	<p>A software bug is an error, flaw, failure, or fault in a computer program or system that causes it to produce an incorrect or unexpected result, or to behave in unintended ways. (Source: <a href="https://en.wikipedia.org/wiki/Software_bug">Wikipedia</a>)</p>
+
+	<p>The mindset and attitude to debugging is perhaps the most important part, because it determines how effectively you'll fix the error, and what you'll learn from it — if anything. (Source: <a href="https://programmers.stackexchange.com/questions/10735/how-to-most-effectively-debug-code">StackExchange</a>)</p>
+
+	<p>Classics on software development like <em>The Pragmatic Programmer</em> and <em>Code Complete</em> basically argue for the same approach: <strong>every error is an opportunity to learn, almost always about yourself </strong> (because only beginners blame the compiler/computer first). (Source: <a href="https://programmers.stackexchange.com/questions/10735/how-to-most-effectively-debug-code">StackExchange</a>)</p>
+
+	<p>So treat it as a <em><strong>mystery</strong></em> which will be interesting to crack. And cracking that mystery should be done systematically, by expressing our assumptions (to ourselves, or to others) and then testing our assumptions, one-by-one if need be — using every tool at our disposal, especially debuggers and automated test frameworks. Then after the mystery is solved, you can do even better by looking through all your code for similar errors you may have made; and write an automated test to ensure the error will not happen unknowingly again. (Source: <a href="https://programmers.stackexchange.com/questions/10735/how-to-most-effectively-debug-code">StackExchange</a>)</p>
+
+	<hr />
+
+	<h3>Bugs vs errors</h3>
+	<p>Some would prefer the term <strong>"error"</strong> rather than <em>"bug"</em>, because it points to programmer's own (sloppy) thinking, and not a "bug that maliciously sneaked in while the programmer was not looking" (<a href="https://www.cs.utexas.edu/users/EWD/transcriptions/EWD10xx/EWD1036.html">E.W. Dijkstra</a>). <br />Anyway, here is a list of terms that coders use while refering to bugs and errors:
+	<ul>
+		<li>problems</li>
+		<li>mistakes</li>
+		<li>anomalies</li>
+		<li>faults</li>
+		<li>failures</li>
+		<li>crashes</li>
+		<li>incidents</li>
+		<li>etc.</li>
+	</ul>
+
+	<hr />
+
+	<h3>Three important things to share while asking for help</h3>
+	<p>Learning how to learn is crucial for a successful coder. One of the biggest surprises for novice programmers is just how much of their "programming time" is spent as "debugging time." (Source: <a href="http://blog.codeunion.io/2014/09/03/teaching-novices-how-to-debug-code/">codeunion</a>)</p>
+
+	<h4>The need to establish a <em>shared context</em></h4>
+	<p><em>Student</em>: <blockquote>My code isn't working! What's wrong???</blockquote>
+	Teacher: <blockquote>How am I supposed to know. I need more information. :-)<br />
+	Can you please answer these 3 questions as best as you can, first?<br />
+	<ol>
+		<li>What makes you say your code isn't working?</li>
+		<li>What did you expect your code to do and why?</li>
+		<li>What did your code do instead and how do you know?</li>
+	</ol></blockquote>
+
+	<p>And an experienced programmer would usually answer along the lines: <blockquote>"I wanted to do <strong>X</strong>, so I wrote &lt;some-code&gt;. I expected to see <strong>Y</strong> when I ran this code, but instead I saw <strong>Z</strong>. What am I missing?"</blockquote></p>
+
+	<hr />
+
+	<table>
+		<tr><th>Source code</th><th>Expectations</th><th>Results</th></tr>
+		<tr><td>Valid</td><td>Fulfilled</td><td>It works!</td></tr>
+		<tr><td>Not valid</td><td>Unexpected</td><td>Doesn't work.</td></tr>
+	</table>
+
+	<hr />
+
+	<p>Want to learn more?</p>
+
+	<form action="https://en.wikipedia.org/wiki/Debugging">
+		<input type="submit" value="Click here!" />
+	</form>
+
+</body>
+</html>
