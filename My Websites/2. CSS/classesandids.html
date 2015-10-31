@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Learning CSS</title>
+
+	<meta charset="utf-8" />
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+	<!-- NOTICE: this is an internal css styling -->
+
+	<style type="text/css">
+
+		/* .class selector styles all elements with the specified class */
+		.large {
+				font-size:300%;
+		}
+
+		/* #id is a unique; use it only for a single element within a page */
+		#lila {
+				color:purple;
+		}
+
+		#cyan {
+				color:#00FFFF;
+		}
+
+		.underline {
+				text-decoration:underline;
+		}
+
+		.bold {
+				font-weight:bold;
+		}
+
+	</style>
+
+</head>
+
+<body>
+
+    <p class="large">This paragraph styled with a large .class selector.</p>
+
+		<p id="lila">This is a paragraph styled with an #id selector.</p>
+
+		<p id="cyan" class="large">This is a paragraph styled with both a .large class selector and greenish-blue #cyan id selector.</p>
+
+
+		<!-- <span> tag is an inline element, which does not inherently represent anything; it affects only selected words -->
+		<p>The third <span class="underline large bold">word</span> in this paragraph is underlined.</p>
+
+</body>
+</html>
