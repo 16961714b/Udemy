@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Learning CSS</title>
+
+	<meta charset="utf-8" />
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+	<!-- NOTICE: this is an internal css styling -->
+
+	<style type="text/css">
+
+		.large {
+				font-size:200%;
+		}
+
+		#lila {
+				color:#950095;
+		}
+
+		#cyan {
+				color:#00FFFF;
+		}
+
+		.underline {
+				text-decoration:underline;
+		}
+
+		.bold {
+				font-weight:bold;
+		}
+
+		/*
+		div {
+				background-color:#F3F300;
+				width:300px;
+				height:180px;
+				float:left;
+		}
+		*/
+
+		.redbox {
+				background-color:#FF1948;
+				width:170px;
+				height:90px;
+		}
+
+
+		.floatleft {
+				float:left;
+		}
+
+		.greybox {
+				background-color:#848484;
+				width:350px;
+				height:250px;
+				float:right;
+		}
+
+		/* use the clearing <div> if you want your non-floated text to appear beneath the floated text; clear:left; right; both; */
+		.clear {
+				clear:both;
+		}
+
+	</style>
+
+</head>
+
+<body>
+
+		<div>
+    	<p class="large">This paragraph styled with a large .class selector.</p>
+		</div>
+
+		<div class="greybox">
+			<p id="cyan" class="large">This is a paragraph styled with both a .large class selector and greenish-blue #cyan id selector.</p>
+		</div>
+
+		<div>		
+			<p class="large">This is a paragraph styled with a large .class selector.</p>
+		</div>
+
+		<div class="redbox floatleft">		
+			<p id="lila">This is a paragraph styled with an #id selector.</p>
+		</div>
+
+		<!-- use the clearing <div> if you want your non-floated text to appear beneath the floated text -->
+		<div class="clear"></div>
+
+		<div>		
+			<p class="large">This is a paragraph styled with a large .class selector.</p>
+		</div>
+
+</body>
+</html>
