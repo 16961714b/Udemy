@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Learning CSS</title>
+
+	<meta charset="utf-8" />
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+	<!-- NOTICE: this is an internal css styling -->
+
+	<style type="text/css">
+
+		.large {
+				font-size:200%;
+		}
+
+		#lila {
+				color:#950095;
+		}
+
+		#cyan {
+				color:#00FFFF;
+		}
+
+		.underline {
+				text-decoration:underline;
+		}
+
+		.bold {
+				font-weight:bold;
+		}
+
+		/*
+		html color codes
+
+		HEX color code
+			color: red;
+			color: #F00;
+			color: #FF0000;
+
+		RGB (Red, Green, Blue) color code
+			color: red;
+			color: rgb(255, 0, 0);
+			color: rgb(100%, 0%, 0%);			
+
+		Online sources for html color codes:
+		https://en.wikipedia.org/wiki/Web_colors
+		http://html-color-codes.info/
+		https://color.adobe.com/create/color-wheel
+		http://www.w3schools.com/tags/ref_colorpicker.asp
+		http://www.color-hex.com/
+		*/
+
+		div {
+				background-color:#F3F300;
+				width:300px;
+				height:120px;
+		}
+
+		.redbox {
+				background-color:#FF1948;
+				width:170px;
+				height:60px;
+		}
+
+		.greybox {
+				background-color:#848484;
+				width:350px;
+				height:200px;
+		}
+
+	</style>
+
+</head>
+
+<body>
+
+		<div>
+    	<p class="large">This paragraph styled with a large .class selector.</p>
+		</div>
+
+		<div class="redbox">		
+			<p id="lila">This is a paragraph styled with an #id selector.</p>
+		</div>
+
+		<div class="greybox">
+			<p id="cyan" class="large">This is a paragraph styled with both a .large class selector and greenish-blue #cyan id selector.</p>
+		</div>
+
+</body>
+</html>
