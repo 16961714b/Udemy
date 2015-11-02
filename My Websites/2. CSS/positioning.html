@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Learning CSS</title>
+
+	<meta charset="utf-8" />
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+	<!-- NOTICE: this is an internal css styling -->
+
+	<style type="text/css">
+
+		.large {
+				font-size:200%;
+		}
+
+		#lila {
+				color:#950095;
+		}
+
+		#cyan {
+				color:#00FFFF;
+		}
+
+		.underline {
+				text-decoration:underline;
+		}
+
+		.bold {
+				font-weight:bold;
+		}
+
+	/* 
+		default position is static;
+		position:static;
+
+		use z-index to position boxes on each other
+		but you need to define position:relative;
+		
+		position:relative; moves things around relative to where they would otherwise be
+	*/
+
+		.redbox {
+				background-color:#FF1948;
+				width:170px;
+				height:90px;
+				position:relative;
+				left:-50px;
+				top:-100px;
+				z-index:2;
+		}
+
+		.greybox {
+				background-color:#848484;
+				width:350px;
+				height:250px;
+				position:relative;
+				left:100px;
+				top:200px;
+				z-index:1;
+		}
+
+	/* 
+		use position:absolute; to take the <div> block out of the flow of your page
+
+		all other <div> elements will ignore the presence of the yellowbox <div> defined by position:absolute;
+		
+		the yellowbox is there, but it's not affecting the layout of any other elements on the page
+	*/
+
+		.yellowbox {
+				background-color:#FFEB3B;
+				width:160px;
+				height:120px;
+				position:absolute;
+		}
+
+		.bluebox {
+				background-color:#0091EA;
+				width:300px;
+				height:400px;
+		}
+
+	</style>
+
+</head>
+
+<body>
+
+		<div>
+			<p class="large">This paragraph styled with a large .class selector.</p>
+		</div>
+
+		<div class="greybox">
+			<p id="cyan" class="large">This is a paragraph styled with both a .large class selector and greenish-blue #cyan id selector.</p>
+		</div>
+
+		<div>		
+			<p class="large">This is a paragraph styled with a large .class selector.</p>
+		</div>
+
+		<div class="redbox">		
+			<p id="lila">This is a paragraph styled with an #id selector.</p>
+		</div>
+
+		<div>		
+			<p class="large">This is a paragraph styled with a large .class selector.</p>
+		</div>
+
+		<div class="yellowbox">
+			<p>This is a paragraph in a yellowbox.</p>
+		</div>
+
+		<div class="bluebox">
+			<p>This is a paragraph in a bluebox.</p>
+		</div>
+
+		<div class="bluebox">
+			<p>This is a paragraph in a bluebox.</p>
+		</div>
+
+</body>
+</html>

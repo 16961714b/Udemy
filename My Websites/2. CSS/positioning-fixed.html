@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Learning CSS</title>
+
+	<meta charset="utf-8" />
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+	<!-- NOTICE: this is an internal css styling -->
+
+	<style type="text/css">
+
+	/* 
+		position:fixed; is similar to position:absolute; in a sense that everything else on the page will ignore the presence of that fixed <div>
+
+		fixed <div> is fixed relative to the browser window, e.g. it's quite commonly used for a fixed header bar.
+	*/
+
+		.greenbox {			
+				background-color:#64DD17;
+				width:400px;
+				height:50px;
+				z-index:1;
+				position:fixed;
+				left:100px;
+				top:50px;
+		}
+
+		.brownbox {
+				background-color:#8D6E63;
+				width:300px;
+				height:400px;
+				z-index:2;
+		}
+		
+	</style>
+
+</head>
+
+<body>
+
+		<div class="greenbox">
+			<p>This is a paragraph in a fixed greenbox.</p>
+		</div>
+
+		<div class="brownbox">
+			<p>This is a paragraph in a brownbox.</p>
+		</div>
+		
+		<div class="brownbox">
+			<p>This is a paragraph in a brownbox.</p>
+		</div>
+
+		<div class="brownbox">
+			<p>This is a paragraph in a brownbox.</p>
+		</div>
+
+		<div class="brownbox">
+			<p>This is a paragraph in a brownbox.</p>
+		</div>
+		
+		<div class="brownbox">
+			<p>This is a paragraph in a brownbox.</p>
+		</div>
+
+		<div class="brownbox">
+			<p>This is a paragraph in a brownbox.</p>
+		</div>
+
+</body>
+</html>
