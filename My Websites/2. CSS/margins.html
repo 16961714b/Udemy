@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Learning CSS</title>
+
+	<meta charset="utf-8" />
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+	<!-- NOTICE: this is an internal css styling -->
+
+	<style type="text/css">
+
+	/* 
+		margin:50px; 
+		creates a 50px margin all around (top, right, bottom, left) the <div> element
+
+		margin:50px 100px 200px 10px;
+		creates a 50px margin on the top, 
+							100px margin on the right,
+							200px margin on the bottom,
+							10px margin on the left.
+	*/
+
+		.greenbox {			
+				background-color:#64DD17;
+				width:400px;
+				height:50px;
+				z-index:1;
+				margin:50px;
+		}
+
+	/* 
+		margin-left:500px; 
+		creates a 500px margin on the left of the <div> element
+		
+		e.g. if you don't know what the existing margins are, or you don't want to set them again.
+		
+		margin-top:50px;
+		margin-right:50px;
+		margin-bottom:50px;
+		margin-left:50px;
+	*/
+
+		.brownbox {
+				background-color:#8D6E63;
+				width:300px;
+				height:200px;
+				z-index:2;
+				margin-left:500px;
+		}
+		
+	</style>
+
+</head>
+
+<body>
+
+		<div class="greenbox">
+			<p>This is a paragraph in a fixed greenbox.</p>
+		</div>
+
+		<div class="brownbox">
+			<p>This is a paragraph in a brownbox.</p>
+		</div>
+		
+		<div class="brownbox">
+			<p>This is a paragraph in a brownbox.</p>
+		</div>
+
+</body>
+</html>
