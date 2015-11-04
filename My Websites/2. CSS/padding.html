@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Learning CSS</title>
+
+	<meta charset="utf-8" />
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+	<!-- NOTICE: this is an internal css styling -->
+
+	<style type="text/css">
+
+	/* 
+		padding:10px; 
+		creates a 10px padding all around (top, right, bottom, left) the inside edge <div> element; but notice <p> element formating already has a default margin.
+	*/
+
+		.greenbox {			
+				background-color:#64DD17;
+				width:400px;
+				height:100px;
+				padding:10px;
+		}
+
+		.brownbox {
+				background-color:#8D6E63;
+				width:400px;
+				height:200px;
+				padding:20px;
+		}
+
+		.no-padding {
+				padding:10px;
+				margin:0px;
+		}
+
+	/* 
+		padding:10px 100px;
+		creates a 10px padding on top and bottom, and 100px on right and left, following the clockwise rule (top, right, bottom, left).
+		
+		IMPORTANT NOTICE!
+		by adding the padding you actually increase the width (e.g. 400px+100px+100px) and height (e.g. 200px+10px+10px) of the <div> element on your site.
+	*/
+
+		.bluebox {
+				background-color:#4FC3F7;
+				width:400px;
+				height:200px;
+				padding:10px 100px;
+		}
+	
+		.redbox {
+				background-color:#E53935;
+				width:400px;
+				height:200px;
+				padding-left:100px;
+		}
+
+	</style>
+
+</head>
+
+<body>
+
+		<div class="greenbox">
+			<p>This greenbox has 10px padding. The paragraph includes &lt;p&gt; tag formating, which already has default margin settings. Notice difference in padding in the following greenbox.</p>
+		</div>
+
+		<br />
+
+		<div class="greenbox">
+			This greenbox has 10px padding, but the text is without &lt;p&gt; tag formating.
+		</div>
+
+		<br />
+
+		<div class="brownbox">
+			<p>This brownbox has 10px padding. The paragraph includes &lt;p&gt; tag formating, which already has default margin settings. Notice difference in padding in the following brownbox.</p>
+		</div>
+
+		<br />
+
+		<div class="brownbox no-padding">
+			<p class="no-padding">This brownbox has 10px padding. The paragraph includes &lt;p&gt; tag formating with margin settings redefined to 0px. Notice difference in padding comparing to the first brownbox.</p>
+		</div>
+
+		<br />
+
+		<div class="bluebox">
+			<p>This bluebox has 10px and 100px padding. The paragraph includes &lt;p&gt; tag formating, which already has default margin settings.</p>
+		</div>
+
+		<br />
+
+		<div class="redbox">
+			<p>This redbox has 100px padding on the left. The paragraph includes &lt;p&gt; tag formating, which already has default margin settings.</p>
+		</div>
+
+</body>
+</html>
