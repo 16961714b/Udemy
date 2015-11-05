@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Learning CSS</title>
+
+	<meta charset="utf-8" />
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+	<!-- NOTICE: this is an internal css styling -->
+
+	<style type="text/css">
+
+		div {
+				width:100px;				
+				height:100px;
+				float:left;
+				margin:20px;
+		}
+
+	/* 
+		border:5px black solid;
+		creates a 5px border all around (top, right, bottom, left) the outside of the <div> element;
+
+		CSS border-style property
+		apart from solid, there is a number of different border-style properties;
+		http://www.w3schools.com/cssref/pr_border-style.asp
+		http://www.w3schools.com/css/css_border.asp
+		https://developer.mozilla.org/en-US/docs/Web/CSS/border-style
+	*/
+
+		.red {
+				background-color:red;
+				border:5px black solid;
+		}
+
+	/*
+		border-style:ridge solid dotted dashed;
+		border-width:10px 5px 10px 5px;
+		border-color:green yellow red yellow;
+		
+		sets the above mentioned values for the border on 4 sides (top, right, bottom, left) around the <div> element;
+	*/
+
+		.blue {
+				background-color:blue;
+				border-style:ridge solid dotted dashed;
+				border-width:10px 5px 10px 5px;
+				border-color:green yellow red yellow;
+		}
+
+
+	/* 
+		border-radius:10px;
+		creates a curvy set of corners;
+
+		border-radius:50px;
+		the half of the height:100px; of the <div> element will create a circle;
+
+		NOTICE: some older browsers do not support the border-radius tag;
+	*/
+
+		.green {
+				background-color:green;
+				border:3px yellow dotted;
+				border-radius:10px;
+		}
+
+		.redbox {			
+				background-color:#F44336;
+				width:100px;
+				height:100px;
+				float:left;
+		}
+
+		.bluebox {
+				background-color:#2196F3;
+				width:100px;
+				height:100px;
+				float:left;
+		}
+
+		.greenbox {
+				background-color:#4CAF50;
+				width:100px;
+				height:100px;
+				float:left;
+		}
+
+	</style>
+
+</head>
+
+<body>
+
+		<div class="red"> </div>
+
+		<div class="blue"> </div>
+
+		<div class="green"> </div>
+
+		<br /><br /><br /><br /><br /><br /><br /><br /><br />
+
+		<div class="redbox">
+			<p>This redbox contains a paragraph.</p>
+		</div>
+
+		<br />
+
+		<div class="bluebox">
+			<p>This bluebox contains a paragraph.</p>
+		</div>
+
+		<br />
+
+		<div class="greenbox">
+			<p>This greenbox contains a paragraph.</p>
+		</div>
+
+</body>
+</html>
