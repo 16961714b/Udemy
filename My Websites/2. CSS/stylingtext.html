@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Learning CSS</title>
+
+	<meta charset="utf-8" />
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+	<!-- NOTICE: this is an internal css styling -->
+
+	<style type="text/css">
+
+		p {
+				font-family:Arial, Helvetica, sans-serif;
+		}		
+
+	/*	
+		font-size:200%;
+		this is a relative font size
+		twice as large as the text would otherwise have been
+
+		font-size:20px;
+		this is an absolute font size, specifing pixels
+		the default font-size in most of the browsers is 16px;
+
+		font-size:2em;
+		2x16px (twice the default font-size)
+	*/
+
+		.bold {
+				font-weight:bold;
+				color:green;
+				font-size:200%;
+		}
+
+		.italic {
+				font-style:italic;
+				color:yellow;
+				background-color:blue;
+		}
+
+		.underline {
+				font-size:1.5em;
+				text-decoration:underline;
+		}
+
+	</style>
+
+</head>
+
+<body>
+	
+	<p>This is some regular text.</p>
+
+	<p class="bold">This is some bold text.</p>
+
+	<p class="italic">This is some <span class="underline">italic</span> text.</p>
+
+</body>
+</html>
