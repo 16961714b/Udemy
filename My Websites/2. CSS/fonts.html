@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Learning CSS</title>
+
+	<meta charset="utf-8" />
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+	<!-- NOTICE: this is an internal css styling -->
+
+	<style type="text/css">
+
+	/* 
+		css web safe font combinations
+		the font-family property should hold several font names as a "fallback" system, to ensure maximum compatibility between browsers/operating systems; start with the font you prefer, and end with a generic family;
+
+		http://www.w3schools.com/cssref/css_websafe_fonts.asp
+		http://www.w3schools.com/css/css_font.asp
+		https://developer.mozilla.org/en-US/docs/Web/CSS/font
+		https://developer.mozilla.org/en-US/docs/Web/CSS/font-family
+	*/
+
+		h1 {
+				font-family:Georgia, Times, serif;
+		}		
+
+		.sans {
+				font-family:Arial, Helvetica, sans-serif;
+		}
+
+		.serif {
+				font-family:"Times New Roman", Times, Georgia, serif;
+		}
+
+		.monospace {
+				font-family:"DejaVu Sans Mono", "Lucida Console", Courier, monospace;
+		}
+
+	</style>
+
+</head>
+
+<body>
+	<h1>Playing with some CSS fonts!</h1>
+	
+	<p class="sans">This is some text written in sans-serif font.</p>
+
+	<p class="serif">This is some text written in serif font.</p>
+
+	<p class="monospace">This is some text written in monospace font, mostly used by coders.</p>
+
+</body>
+</html>
