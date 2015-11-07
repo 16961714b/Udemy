@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Learning CSS</title>
+
+	<meta charset="utf-8" />
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+	<!-- NOTICE: this is an internal css styling -->
+
+	<style type="text/css">
+
+		p {
+				font-family:Arial, Helvetica, sans-serif;
+		}		
+
+	/*
+		you can use text-align property to set values: 
+		left (default)
+		right
+		center
+		justify
+	*/
+
+		.greenbox {
+				background-color:green;
+				width:300px;
+				height:300px;
+				text-align:justify;
+		}
+
+	/*
+		notice that text-align tag moves the content relatively to the parent element
+
+		e.g. the <p> tag inside <body> aligns the text relative to the whole page, the <p> tag inside <div> aligns the text relative to the div
+	*/
+
+		.right {
+				text-align:right;
+		}
+
+		.center {
+				text-align:center;
+		}
+
+	/*
+		a:link
+		defines values for anchor tag of default, unvisited link
+		a:visited
+		defines values for anchor tag of visited link
+		a:hover
+		defines values for anchor tag when the user hovers over the link
+		a:active
+		defines values for anchor tag of a link the moment it is clicked
+	*/
+
+		a:visited {
+				color:green;
+		}
+
+		a:hover {
+				font-size:50px;
+		}
+
+		a:active {
+				font-size:120px;
+				color:#EEFF41;
+		}
+
+		.sverige {
+				color:#FCD116;
+				background-color:#005B99;
+		}
+
+	</style>
+
+</head>
+
+<body>
+
+	<div class="greenbox">
+		<p>This is some regular text. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer at est pretium, pellentesque sapien in, tempor massa. Integer pulvinar vulputate elit non luctus. Mauris semper, neque non malesuada aliquam, nulla ligula porta risus, nec ultricies augue justo non urna. Nullam pretium diam a libero iaculis, sed mollis risus viverra. Cras vel scelerisque augue. Sed vehicula fermentum risus ut ultrices. Integer pharetra elit at elit varius condimentum. In cursus diam in ipsum facilisis, sit amet tristique diam pharetra.</p>
+	</div>
+	
+
+	<p class="right">This is some right-aligned text.</p>
+
+	<p class="center">This is some center-aligned text.</p>
+
+	<p>This is some left-aligned (default) text.</p>
+
+	<br />
+
+	<a href="https://encrypted.google.com/">Google</a>
+
+	<br /><br />
+
+	<!-- the attribute target with the value _blank opens the link in a different tab 
+			
+			https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a
+	-->
+
+	<a href="https://encrypted.google.com/" target="_blank">Google</a> opens in a different tab.
+
+	<br /><br />
+	
+	<a class="sverige" href="https://www.google.se/" target="_blank">Google Sverige</a> opens in a different tab.
+
+	<br /><br />
+	
+	<a href="https://sweden.se/">sweden.se</a>
+
+</body>
+
+</html>
