@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Learning JavaScript</title>
+
+	<meta charset="utf-8" />
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+
+<body>
+
+	<!-- The following are some examples of connecting javaScript with the particular elements and the parts of the page itself -->
+
+
+	<!-- javascript can access (alert) the HTML content of a <p> element with id="text" using the innerHTML property -->
+
+	<p id="text">Some text</p>
+
+	<script type="text/javascript">
+		
+		// This is a single line comment inside javaScript
+
+		alert(document.getElementById("text").innerHTML);
+		
+	</script>
+
+
+	<!-- Javascript can change the HTML content of a <p> element with id="text2" using the innerHTML property -->
+
+	<p id="text2">Some text</p>
+
+	<script type="text/javascript">
+
+		/* This is a multi-line comment inside javaScript
+		
+		document in JS refers to whole webpage;
+		use . to refer to subelement within the document
+		we will get that document by ID --> getElementById
+		and we will get the function an ID ("text2")
+		so we've got the element and now .innerHTML is telling
+		us what to do with the element
+		
+		*/
+		
+		document.getElementById("text2").innerHTML="Some more text";
+		
+	</script>
+
+</body>
+
+</html>
