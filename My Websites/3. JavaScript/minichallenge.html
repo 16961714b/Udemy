@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Learning JavaScript</title>
+
+	<meta charset="utf-8" />
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+
+<body>
+
+	<!-- Responding to a click with javaScript, combining .innerHTML and .onclick command -->
+
+	<!-- Changing some text -->
+	<!-- when the button "textChanger" is clicked it will run the "firstDiv" script, which will change the original text "This is some text" into "This is awesome!" -->
+
+	<button id="textChanger">Change first div text</button>
+
+	<div id="firstDiv">This is some text</div>
+
+	<!-- Adding more text -->
+	<!-- when the button "textAppender" is clicked it will run the "secondDiv" script, which will append text to the original <div> each time it is clicked -->
+
+	<button id="textAppender">Append some text</button>
+
+	<div id="secondDiv">Javascript is...</div>
+
+	<!-- Creating some text -->
+	<!-- when the button "textCreator" is clicked it will run the "emptyDiv" script, which will create text inside an empty <div>, be it text or html e.g. unordered list <ul> -->
+
+	<button id="textCreator">Create some text</button>
+
+	<div id="emptyDiv"></div>
+
+	<script type="text/javascript">
+		
+		document.getElementById("textChanger").onclick=function() {
+		
+			document.getElementById("firstDiv").innerHTML="This is awesome!";
+
+		}
+
+		document.getElementById("textAppender").onclick=function() {
+
+			document.getElementById("secondDiv").innerHTML=document.getElementById("secondDiv").innerHTML + "great!";			
+
+		}
+
+			document.getElementById("textCreator").onclick=function() {
+
+		document.getElementById("emptyDiv").innerHTML="<ul><li>Cat</li><li>Dog</li></lu>";
+
+		}
+		
+	</script>
+
+</body>
+
+</html>
