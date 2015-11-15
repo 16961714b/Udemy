@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Learning JavaScript</title>
+
+	<meta charset="utf-8" />
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+</head>
+
+<body>
+
+	<!-- With a click of a button the text inside #firstDiv will disappear -->
+
+	<button id="disappearMe">Click to activate magic</button>	
+
+	<div id="firstDiv">This text disappears with click...</div>
+
+	<br /><br />
+
+	<!-- This changes the text inside #inputDiv after user submits an input (just once) -->	
+
+	<input id="myInput" type="text" placeholder="write here..." />
+
+	<button id="submitInput">Submit your input</button>	
+
+	<div id="inputDiv">This text will change after you submit your input.</div>
+	
+	<br /><br />
+
+	<!-- This code uses input as a variable that user can control every time it is submitted -->
+
+	<input id="userInput" type="text" value="test" />
+
+	<button id="submitUserInput">Submit your input</button>	
+
+	<div id="inputUserDiv">This text will change after you submit your input.</div>
+
+
+	<script type="text/javascript">
+
+		var divId="firstDiv";
+
+		document.getElementById("disappearMe").onclick=function() {
+
+			document.getElementById(divId).style.display="none";
+
+		}
+
+		var newText=document.getElementById("myInput").value;
+
+		document.getElementById("submitInput").onclick=function() {
+
+			document.getElementById("inputDiv").innerHTML=newText;
+
+		}
+		
+		/* we use javaScript variable defaultText, which we set to a value of an "userInput" value in order to change the HTML of the "inputDiv" div */ 
+
+		var userText=document.getElementById("userInput").value;
+		
+		document.getElementById("submitUserInput").onclick=function() {
+
+			userText=document.getElementById("userInput").value;
+
+			document.getElementById("inputUserDiv").innerHTML=userText;
+
+		}
+
+	</script>
+
+</body>
+</html>
