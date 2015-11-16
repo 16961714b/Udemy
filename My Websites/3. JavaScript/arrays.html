@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Learning JavaScript</title>
+
+	<meta charset="utf-8" />
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+</head>
+
+<body>
+
+	<!-- Arrays are very similar to variables, but they allow you to store several different values within the same object - array -->
+
+	<button id="firstButton">Change the text!</button>	
+
+	<div id="firstDiv">This text will change after you submit your input.</div>
+
+	<br /><br />
+
+	<button id="secondButton">Change the text!</button>
+
+	<div id="secondDiv">This text changes after you submit your input. Also see the console.log inside your browser.</div>
+
+	<script type="text/javascript">
+		
+		/* Defining an array: create a new variable, call it whatever you like (e.g. myArray) and make it equal to new Array(); */ 
+
+		var myArray=new Array();
+		
+		/* an array can store an infinite number of values; e.g. it may be used to list all of registered users in you database, or all of the <div>s of a particular webpage */
+
+		myArray[0]="pizza";
+		myArray[1]="chocolate";
+
+		/* while debugging console.log(); comes very handy, as you can view the values in web console - you can access it via Developer Tools - ctrl+shift+K in Firefox or ctrl+shift+J in Chrome */
+		console.log(myArray);
+
+		// when the button is clicked		
+		document.getElementById("firstButton").onclick=function() {
+
+		// we want to get the "firstDiv" by its Id; observe the output when you change the number of defined values of myArray[]; inside .innerHTML
+			document.getElementById("firstDiv").innerHTML=myArray[1];
+
+		}
+
+		var myArray2=new Array();
+		
+		/* displaying stored values of an array with console.log */
+
+		myArray2[0]="pizza";
+		myArray2[1]="chocolate";
+		myArray2[2]="apple";
+		myArray2[3]="carrot";
+		myArray2[4]="soup";
+		myArray2[5]="potato";
+
+		console.log(myArray2);
+
+		// a shorthand way of creating an array; note that the first value "rain" equals 0, "sunshine" = 1, etc.
+		myOtherArray=["rain", "sunshine", "fog"];
+
+		// to add a new element at the end of an array you can use .push command
+		myOtherArray.push("snow");
+
+		// to remove elements from an array you can use function .splice
+		// .splice(2, 1); removes the "fog" element, which equals to 2, and it is only 1 item 
+		//myOtherArray.splice(2, 1);
+
+		// .splice(2, 2); removes the "fog" and "snow" element, starting at value 2, and removing 2 consecutive items 
+		// myOtherArray.splice(2, 2);
+
+		// we can also use the .splice command to add in elements in the middle of an array
+		/* adding an element after the "rain" and before "sunshine", keep value 1 (sunshine), we don't want to remove any items (0), but we want to add in one item "hail" */
+		myOtherArray.splice(1, 0, "hail");
+
+		console.log(myOtherArray);
+
+		// when the button is clicked		
+		document.getElementById("secondButton").onclick=function() {
+
+		// we want to get the "firstDiv" by its Id; observe the output when you change the number of defined values of myArray[]; inside .innerHTML
+			document.getElementById("secondDiv").innerHTML=myArray[4];
+
+		}
+
+	</script>
+
+</body>
+</html>
