@@ -72,10 +72,13 @@
 		// myOtherArray.splice(2, 2);
 
 		// we can also use the .splice command to add in elements in the middle of an array
-		/* adding an element after the "rain" and before "sunshine", keep value 1 (sunshine), we don't want to remove any items (0), but we want to add in one item "hail" */
-		myOtherArray.splice(1, 0, "hail");
+		/* adding an element after the "rain" and before "sunshine", keep value 1 (sunshine), we don't want to remove any items (0), but we want to add in three more items "hail", "breeze", "cloudy" */
+		myOtherArray.splice(1, 0, "hail", "breeze", "cloudy");
 
 		console.log(myOtherArray);
+		
+		// to see how many elements an array contains use the .length command
+		console.log(myOtherArray.length);
 
 		// when the button is clicked		
 		document.getElementById("secondButton").onclick=function() {
