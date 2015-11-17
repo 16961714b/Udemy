@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Learning JavaScript</title>
+
+	<meta charset="utf-8" />
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+</head>
+
+<body>
+
+	<p>What is the weather?</p>
+	<input id="weatherInput" type="text" value="sunny" />
+	<button id="myButton">Submit</button>
+
+	<script type="text/javascript">
+		
+		/* if statement */
+
+		// x=1; x is set to be equal to 1
+		// x==1; telling the browser test if "x is equal to 1", "x=1 is true" 
+		
+		var x=1;
+
+			if (x==1) {
+
+				alert("x is 1!");
+
+			} else {
+
+				alert("x is not 1!");
+
+			}
+
+
+		var x=2;
+
+			if (x==1) {
+
+				alert("x is 1!");
+
+			} else {
+
+				alert("x is not 1!");
+
+			}
+		
+		// checking weather with user's input
+
+		document.getElementById("myButton").onclick=function() {
+		
+			if (document.getElementById("weatherInput").value=="rain") {
+
+				alert("It's raining!");
+
+			} else {
+
+				alert("It's not raining...");
+		
+			}
+
+		}
+
+	</script>
+
+</body>
+</html>

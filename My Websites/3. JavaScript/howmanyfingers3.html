@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Learning Javascript</title>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+	<style>
+
+		body {
+			background-color:#90CAF9;
+		}	
+
+		p {
+			font-family:Monospace;
+			font-size:20px;
+			margin:20px;
+		}
+	
+		.circle {
+			width:100px;
+			height:100px;
+			border-radius:50%;
+			font-size:50px;
+			color:yellow;
+			line-height:100px;
+			text-align:center;
+			background:#000;
+			float:left;
+			margin:10px;
+		}
+	
+	</style>
+	
+</head>
+	
+<body>
+
+	<p>How many fingers am I holding up?</p>
+	<div class="circle" id="circle0">0</div>
+	<div class="circle" id="circle1">1</div>
+	<div class="circle" id="circle2">2</div>
+	<div class="circle" id="circle3">3</div>
+	<div class="circle" id="circle4">4</div>
+	<div class="circle" id="circle5">5</div>
+	
+		
+	<script type="text/javascript">
+	
+		document.getElementById("circle0").onclick=function() {
+	
+			var x=Math.random();
+		
+			x=6*x;
+		
+			x=Math.floor(x);
+		
+			if (x==0) {
+			
+				alert("That's correct!");
+			
+			} else {
+			
+				alert("That's wrong! My number was "+x);
+			
+			}
+		
+		}
+		
+		document.getElementById("circle1").onclick=function() {
+	
+			var x=Math.random();
+		
+			x=6*x;
+		
+			x=Math.floor(x);
+		
+			if (x==1) {
+			
+				alert("That's correct!");
+			
+			} else {
+			
+				alert("That's wrong! My number was "+x);
+			
+			}
+		
+		}
+		
+		document.getElementById("circle2").onclick=function() {
+	
+			var x=Math.random();
+		
+			x=6*x;
+		
+			x=Math.floor(x);
+		
+			if (x==2) {
+			
+				alert("That's correct!");
+			
+			} else {
+			
+				alert("That's wrong! My number was "+x);
+			
+			}
+		
+		}
+		
+		document.getElementById("circle3").onclick=function() {
+	
+			var x=Math.random();
+		
+			x=6*x;
+		
+			x=Math.floor(x);
+		
+			if (x==3) {
+			
+				alert("That's correct!");
+			
+			} else {
+			
+				alert("That's wrong! My number was "+x);
+			
+			}
+		
+		}
+		
+		document.getElementById("circle4").onclick=function() {
+	
+			var x=Math.random();
+		
+			x=6*x;
+		
+			x=Math.floor(x);
+		
+			if (x==4) {
+			
+				alert("That's correct!");
+			
+			} else {
+			
+				alert("That's wrong! My number was "+x);
+			
+			}
+		
+		}
+		
+		document.getElementById("circle5").onclick=function() {
+	
+			var x=Math.random();
+		
+			x=6*x;
+		
+			x=Math.floor(x);
+		
+			if (x==5) {
+			
+				alert("That's correct!");
+			
+			} else {
+			
+				alert("That's wrong! My number was "+x);
+			
+			}
+		
+		}
+	
+	</script>
+
+</body>
+</html>
