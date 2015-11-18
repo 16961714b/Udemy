@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Learning JavaScript</title>
+
+	<meta charset="utf-8" />
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+</head>
+
+<body>
+
+	<p id="arrayString">Nice for loops</p>
+
+	<script type="text/javascript">
+		
+		/* for loop statement */
+
+		// for takes us through a circle of values of a particular variable
+		// var i=1; --> this is our standard counter variable with an initial value
+		// i<5; --> setting the upper value of the loop, meaning that the loop will continue as long as this statement is true
+		// i++ --> i is going to go up by 1 each time (1, 2, 3, 4)
+		// i=i+2 --> i is going to increment by 2 each time
+		// i=i-2 --> i is going to decrease by 2 each time
+
+		// i++ is the same as i=i+1
+
+		for (var i=1; i<5; i=i+1) {
+
+				alert(i);	
+
+		}
+
+
+		for (var i=1; i<9; i=i+3) {
+
+				alert(i);
+
+		}
+
+		// example 1
+
+		var myArray=["pizza", "chocolate", "carrots"];
+
+			for (var i=0; i<myArray.length; i++) {
+
+					alert(myArray[i]);
+
+			}
+
+		//  example 2
+
+		var arrayString;
+
+		var myArray=["pizza", "chocolate", "carrots"];
+
+			for (var i=0; i<myArray.length; i++) {
+
+					arrayString=arrayString+myArray[i];
+
+			}
+
+		document.getElementById("arrayString").innerHTML=arrayString;
+
+		//  example 3
+
+		var arrayString="";
+
+		var myArray=["pizza", "chocolate", "carrots"];
+
+			for (var i=0; i<myArray.length; i++) {
+
+					arrayString=arrayString+myArray[i]+" ";
+
+			}
+
+		document.getElementById("arrayString").innerHTML=arrayString;
+
+	</script>
+
+</body>
+</html>
