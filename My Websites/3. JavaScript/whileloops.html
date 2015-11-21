@@ -22,7 +22,38 @@
 		
 		/* while loop statement */
 
+		// while loop is particulary useful when you don't know how long the loop is going to be
+
+		// the computer will guess the number we set as the input
+		// while loops will possibly go forever, which can cause your browser to crash; be careful what number you write as input (1, 2, 3, 4, 5)
+
+		document.getElementById("guess").onclick=function() {
+
+			var gotit=false; var guesses=1; var x;
+
+			while (gotit==false) {
+
+				x=Math.random();
+
+				x=6*x;
+
+				x=Math.floor(x);
+
+				if (document.getElementById("myNumber").value==x) {
+
+						gotit=true;
 		
+				} else {
+
+						guesses++;;
+
+				}
+
+		}
+
+		alert("Got it! It was a "+x+". It only took me "+guesses+" guesses!");
+
+	}
 
 	</script>
 
