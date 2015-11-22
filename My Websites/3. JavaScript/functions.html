@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Learning JavaScript</title>
+
+	<meta charset="utf-8" />
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+	<style type="text/css">
+
+		.code {
+
+			font-family:monospace;
+			font-size:1.3em;
+			background-color:#E0E0E0;
+
+		}
+
+	</style>
+
+</head>
+
+<body>
+
+	<p>General coding principle states that you should never write a command more than once in your statement. Use <span class="code">function()</span> instead.</p>
+
+	<p>What is your computer's answer to the ultimate question of life, the universe, and everything.</p>
+	
+	<p>The answer is <span id="answer">...</span></p>
+
+	<script type="text/javascript">
+		
+		/* functions */
+
+		// useful for code that you have to write repeatedly
+		// general coding principle states that you should never write a command more than once in your statement
+
+		function alertMe() {
+
+			alert("Hi Peter!");
+
+		}
+
+		alertMe();
+
+		// function that works with particular variables, e.g. adding a+b
+
+		function adding(a, b) {
+
+			alert(a+b);
+
+		}
+
+		adding(3, 4);
+
+		// you can get/return the values, instead of alerting them
+
+		function adding(a, b) {
+
+			return(a+b);
+
+		}
+
+		document.getElementById("answer").innerHTML=adding(21, 21);
+
+		
+	</script>
+
+</body>
+</html>
