@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Learning JavaScript</title>
+
+	<meta charset="utf-8" />
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+	<style type="text/css">
+
+		#redbox {
+
+			height:400px;
+			width:400px;
+			background-color:red;
+
+		}
+
+		#bluebox {
+
+			height:100px;
+			width:100px;
+			background-color:blue;
+			display:none;
+
+		}
+
+		#blackbox {
+
+			height:300px;
+			width:300px;
+			background-color:black;
+			display:none;
+
+		}
+
+		#orangebox {
+
+			height:200px;
+			width:100px;
+			background-color:orange;
+			display:none;
+
+		}
+
+	</style>
+
+</head>
+
+<body>
+
+	<div id="redbox"></div>
+
+	<div id="bluebox"></div>
+
+	<div id="blackbox"></div>
+
+	<div id="orangebox"></div>
+
+	<script type="text/javascript">
+		
+		/* */
+
+		// disappear the redbox with a click of the mouse
+
+		document.getElementById("redbox").onclick=function() {
+
+			document.getElementById("redbox").style.display="none";
+
+		}
+
+		// you can also use this. instead of the whole code in the first line
+
+		document.getElementById("bluebox").onclick=function() {
+
+			this.style.display="none";
+
+		}			
+
+
+/* comment out blocks of JavaScript code in these exercises since it won't necessarily display correctly in the browser */
+
+
+		// function setTimeout will cause the elements to appear after a timespan; e.g. 3000 (miliseconds) = 3 seconds
+
+		setTimeout(function() {
+
+			alert("testDone");
+
+		}, 3000);
+
+		// make the hidden blackbox reappear after 2 seconds
+		// a standard way to display elements is with "block";
+
+		setTimeout(function() {
+
+			document.getElementById("blackbox").style.display="block";
+
+		}, 2000);
+
+		// make the hidden orangebox reappear after random time between 0-5 seconds
+
+		var time=Math.random();
+
+		time=time*5000;
+
+		setTimeout(function() {
+
+			document.getElementById("orangebox").style.display="block";
+
+		}, time);
+
+		// make the bluebox reappear repeatedly after random number of seconds
+
+		function makeBox() {
+
+			var time=Math.random();
+
+			time=time*3000;
+
+			setTimeout(function() {
+
+				document.getElementById("bluebox").style.display="block";
+
+			}, time);
+
+		}	
+
+		document.getElementById("bluebox").onclick=function() {
+
+			this.style.display="none";
+
+			makeBox();
+
+		}
+
+		makeBox();
+
+	</script>
+
+</body>
+</html>
