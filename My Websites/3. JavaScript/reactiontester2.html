@@ -19,28 +19,9 @@
 
 		#bluebox {
 
-			height:100px;
-			width:100px;
+			height:400px;
+			width:400px;
 			background-color:blue;
-			display:none;
-
-		}
-
-		#blackbox {
-
-			height:300px;
-			width:300px;
-			background-color:black;
-			display:none;
-
-		}
-
-		#orangebox {
-
-			height:200px;
-			width:100px;
-			background-color:orange;
-			display:none;
 
 		}
 
@@ -50,84 +31,50 @@
 
 <body>
 
+	<p>[Click the bluebox] Your reaction time: <span id="time"></span> seconds</p>
+
 	<div id="redbox"></div>
 
 	<div id="bluebox"></div>
 
-	<div id="blackbox"></div>
-
-	<div id="orangebox"></div>
-
 	<script type="text/javascript">
 		
-		/* */
+		// Date. function; Date.now() counts the number of milliseconds since the epoch (a date back in 1970s; not Unix timestamp)
 
-		// disappear the redbox with a click of the mouse
+		alert(Date.now());
 
-		document.getElementById("redbox").onclick=function() {
+		// we can measure how far two times are apart by comparing the date between two timestamps;
 
-			document.getElementById("redbox").style.display="none";
+		var clickedTime; var createdTime; var reactionTime;
 
-		}
-
-		// you can also use this. instead of the whole code in the first line
-
-		document.getElementById("bluebox").onclick=function() {
-
-			this.style.display="none";
-
-		}			
-
-
-/* comment out blocks of JavaScript code in these exercises since it won't necessarily display correctly in the browser */
-
-
-		// function setTimeout will cause the elements to appear after a timespan; e.g. 3000 (miliseconds) = 3 seconds
-
-		setTimeout(function() {
-
-			alert("testDone");
-
-		}, 3000);
-
-		// make the hidden blackbox reappear after 2 seconds
-		// a standard way to display elements is with "block";
-
-		setTimeout(function() {
-
-			document.getElementById("blackbox").style.display="block";
-
-		}, 2000);
-
-		// make the hidden orangebox reappear after random time between 0-5 seconds
-
-		var time=Math.random();
-
-		time=time*5000;
-
-		setTimeout(function() {
-
-			document.getElementById("orangebox").style.display="block";
-
-		}, time);
-
-		// make the bluebox reappear repeatedly after random number of seconds
+		Date.now();
 
 		function makeBox() {
 
+			// createdTime - the timestamp when the redbox appears
+			createdTime=Date.now();			
+
 			var time=Math.random();
 
-			time=time*3000;
+			time=time*5000;
 
 			setTimeout(function() {
 
-				document.getElementById("bluebox").style.display="block";
+				document.getElementById("redbox").style.display="block";
 
 			}, time);
 
 		}	
 
-		document.getElementById("bluebox").onclick=function() {
+		document.getElementById("redbox").onclick=function() {
+
+			// clickedTime - sets the value of the timestamp when the redbox is clicked
+
+			clickedTime=Date.now();
+
+			reactionTime=(clickedTime-createdTime)/1000;
+
+			alert(reactionTime);
 
 			this.style.display="none";
 
@@ -136,6 +83,48 @@
 		}
 
 		makeBox();
+
+
+
+		// this code is for bluebox
+
+		var clickedTime; var createdTime; var reactionTime
+
+		function makeBox() {
+
+			var time=Math.random();
+
+			time=time*2000;
+
+			setTimeout(function() {
+
+				document.getElementById("bluebox").style.display="block";
+
+				createdTime=Date.now();
+
+			}, time);
+
+		}	
+
+		document.getElementById("bluebox").onclick=function() {
+
+			clickedTime=Date.now();
+
+			reactionTime=(clickedTime-createdTime)/1000;
+
+			document.getElementById("time").innerHTML=reactionTime;
+
+			this.style.display="none";
+
+			makeBox();
+
+		}
+
+		makeBox();
+
+
+
+
 
 	</script>
 
