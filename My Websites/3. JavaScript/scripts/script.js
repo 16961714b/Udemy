@@ -1,52 +1,4 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Learning JavaScript</title>
-
-	<meta charset="utf-8" />
-	<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1" />
-
-	<style type="text/css">
-
-		body {
-
-			font-family:Verdana, Geneva, sans-serif;
-
-		}
-
-		.bold {
-
-			font-weight:bold;
-
-		}
-
-		#box {
-
-			height:400px;
-			width:400px;
-			background-color:red;
-			position:relative;
-
-		}
-
-	</style>
-
-</head>
-
-<body>
-
-	<h1>Test your reactions!</h1>
-
-	<p>Click on the boxes and circles as quickly as you can!</p>
-
-	<p class="bold">Your reaction time: <span id="time"></span> seconds</p>
-
-	<div id="box"></div>
-
-	<script type="text/javascript">
-
-		// This is a function for Random Color generator; [stackoverflow.com]
+// This is a function for Random Color generator; [stackoverflow.com]
 		function getRandomColor() {
 			// create array called "letters", these are the numbers and letters in html color code
 			// the split() function splits the string '0123456789ABCDEF' into an array; an empty split function .split(''); will split them in each character/array;
@@ -173,8 +125,3 @@
 		}
 
 		makeBox();
-
-	</script>
-
-</body>
-</html>
