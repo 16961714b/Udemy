@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Learning jQuery</title>
+
+	<meta charset="utf-8" />
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	
+	<!-- leave this link in place or replace it and see whether jQuery is installed or not -->
+	<script type="text/javascript" src="jquery/jquery.min.js"></script>
+
+</head>
+
+<body>
+
+	<script>
+
+		// This (jQuery) variable only exists when jQuery is installed, therefore it won't alert anything if it is not installed
+		if (jQuery) {
+
+			alert('jQuery is installed!');
+
+		} else {
+
+			alert('jQuery is not installed');
+
+		}
+
+		// A nice way around that is to use a javaScript (typeof) function, which allows us to examine a variable and see what type of function it is, even if that variable doesn't exist
+
+		if (typeof jQuery != "undefined") {
+
+			alert('jQuery is installed!');
+
+		} else {
+
+			alert('jQuery is not installed');
+
+		}
+
+	</script>
+
+</body>
+</html>
