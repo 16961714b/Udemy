@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Detecting a click</title>
+
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+	<script type="text/javascript" src="jquery/jquery.min.js"></script>
+
+	<style>
+
+		.box {
+
+			margin:10px;
+			height:200px;
+			width:200px;
+			background-color:red;
+			border:2px solid blue; 
+
+		}
+
+		#circle {
+
+			margin:10px;
+			height:300px;
+			width:300px;
+			border-radius:150px;
+			background-color:blue;
+			border:2px solid red;
+
+		}
+
+	</style>
+
+</head>
+
+<body>
+
+	<div class="box"></div>
+	
+	<div class="box"></div>
+
+	<div id="circle"></div>
+
+	<script>
+
+		// selecting multiple elements with jQuery - id, classes, or element types like div
+		$("#circle").click(function() {
+
+			alert("Circle clicked!");
+
+		})
+
+		$(".box").click(function() {
+
+			alert("Box clicked!");
+
+		})
+
+
+		$("div").click(function() {
+
+			alert("<div> clicked!");
+
+		})
+
+	</script>
+
+</body>
+</html>
