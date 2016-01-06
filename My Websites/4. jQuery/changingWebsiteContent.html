@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Changing website content</title>
+
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+	<script type="text/javascript" src="jquery/jquery.min.js"></script>
+
+	<style>
+
+		#circle {
+
+			margin:10px;
+			height:300px;
+			width:300px;
+			border-radius:150px;
+			background-color:blue;
+			border:2px solid red;
+
+		}
+
+		#box {
+
+			margin:10px;
+			height:200px;
+			width:200px;
+			background-color:red;
+			border:2px solid blue; 
+
+		}
+
+	</style>
+
+</head>
+
+<body>
+
+	<div id="circle"></div>
+	<p>This is some text.</p>
+
+	<div id="box"></div>
+	<h3>This is box content.</h3>
+
+	<iframe src="https://www.example.com" id="example"></iframe>
+	<iframe src="http://www.cnn.com" id="cnn"></iframe>
+
+	<script>
+
+		// .html() function can change/update the content of site
+		$("#circle").click(function() {
+
+			$("p").html("The text has been changed!");
+
+		});
+
+		// empty .html() function will return the contents of the attribute you are looking for
+		$("#circle").click(function() {
+
+			alert($("p").html());
+
+		});
+
+		// you can also use .hover() function instead of .click()
+		$("#box").hover(function() {
+
+			$("h3").html("Changed!");
+
+		});
+
+		// to alert the "src" attribute of "iframe" element
+		$("#example").hover(function() {
+
+			alert($("#example").attr("src"));
+
+		});
+
+		// to change the "src" attribute of "iframe" element
+		$("#cnn").hover(function() {
+
+			$("#cnn").attr("src", "http://combinator.se");
+
+		});
+
+	</script>
+
+</body>
+</html>
