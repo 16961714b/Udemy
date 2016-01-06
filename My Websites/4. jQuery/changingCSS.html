@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Changing website content</title>
+
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+	<script type="text/javascript" src="jquery/jquery.min.js"></script>
+
+	<style>
+
+		#circle {
+
+			margin:10px;
+			height:200px;
+			width:200px;
+			border-radius:100px;
+			background-color:blue;
+			border:2px solid red;
+
+		}
+
+		.box {
+
+			margin:10px;
+			height:300px;
+			width:300px;
+			background-color:red;
+			border:2px solid blue; 
+
+		}
+
+	</style>
+
+</head>
+
+<body>
+
+	<div id="circle"></div>
+
+	<div class="box"></div>
+
+	<div id="hideMe" class="box"></div>
+
+	<div id="hideMeSimply" class="box"></div>
+
+	<div id="fadeMeOut" class="box"></div>
+
+	<script>
+
+		// (this) function selects the element that is clicked on
+		$("div").click(function() {
+
+			alert($(this).css("width"));
+
+		});
+
+		// changing css style when clicked on, from pre-defined width to 100px
+		$(".box").click(function() {
+
+			$(this).css("width", "100px");
+
+		});
+
+		// hidding elements when clicked on
+		$("#hideMe").click(function() {
+
+			$(this).css("display", "none");
+
+		});
+
+		// or you can simply use the hide() function
+		$("#hideMeSimply").click(function() {
+
+			$(this).hide();
+
+		});
+
+		// fading out elements
+		$("#fadeMeOut").click(function() {
+
+			$(this).fadeOut();
+
+		});
+
+	</script>
+
+</body>
+</html>

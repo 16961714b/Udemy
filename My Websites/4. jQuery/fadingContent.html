@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Fading content</title>
+
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+	<script type="text/javascript" src="jquery/jquery.min.js"></script>
+
+</head>
+
+<body>
+
+	<p>This is a fading text.</p>
+	<button id="fader">Fade Out!</button>
+	<button id="faderIn">Fade In!</button>
+
+	<h3>Styling this fading text.</h3>
+	<button id="faderStyle">Fade Out slowly!</button>
+	<button id="faderInStyle">Fade In slowly!</button>
+
+	<h4>Text to be faded soon...</h4>
+	<button id="faderCompleted">Fade Out!</button>
+	<button id="faderInCompleted">Fade In!</button>
+
+	<script>
+
+		// click the button to fade out the paragraph 
+		$("#fader").click(function() {
+
+			$("p").fadeOut();
+
+		});
+
+		// click the Fade In! button and the paragraph reemerges
+		$("#faderIn").click(function() {
+
+			$("p").fadeIn();
+
+		});
+
+		// click the button to fade out the heading in 3000 milliseconds (3s)
+		// or instead of .fadeOut(3000) use .fadeOut("slow") or .fadeOut("fast")
+		$("#faderStyle").click(function() {
+
+			$("h3").fadeOut(3000);
+
+		});
+
+		// click the button to fade in the h3 heading in 3s
+		$("#faderInStyle").click(function() {
+
+			$("h3").fadeIn(3000);
+
+		});
+
+		// fading out the h4 heading and calling back alert() function when script finishes
+		$("#faderCompleted").click(function() {
+
+			$("h4").fadeOut(4000, function() {
+
+				alert("FadeOut completed!");
+
+			});
+
+		});
+
+		// fading in the h4 heading and returning alert() function
+		$("#faderInCompleted").click(function() {
+
+			$("h4").fadeIn(4000, function() {
+
+				alert("FadeIn operation completed!");
+
+			});
+
+		});
+
+	</script>
+
+</body>
+</html>

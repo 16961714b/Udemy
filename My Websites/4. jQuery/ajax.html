@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Loading Data With AJAX</title>
+
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+	<script type="text/javascript" src="jquery/jquery.min.js"></script>
+
+	<style>
+
+		#circle {
+
+			width:200px;
+			height:200px;
+			background-color:red;
+			border-radius:100px;
+			border:2px solid blue;
+
+		}
+
+	</style>
+
+</head>
+
+<body>
+
+	<div id="circle"></div>
+
+	<script>
+
+		// click the circle to increase its width/height and move it around
+		// to speed up the animation, replace 1500 with e.g. 500
+		$("#circle").click(function() {
+
+			$(this).animate({
+					width:"300px",
+					height:"300px",
+					borderRadius:"150px",
+					marginLeft:"100px",
+					marginTop:"100px",
+					},1500);
+
+		});
+
+	</script>
+
+</body>
+</html>

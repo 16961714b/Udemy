@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Changing website content</title>
+
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+	<script type="text/javascript" src="jquery/jquery.min.js"></script>
+
+	<style>
+
+		#circle {
+
+			margin:10px;
+			height:200px;
+			width:200px;
+			border-radius:100px;
+			background-color:blue;
+			border:2px solid red;
+
+		}
+
+		.box {
+
+			margin:10px;
+			height:300px;
+			width:300px;
+			background-color:red;
+			border:2px solid blue; 
+
+		}
+
+	</style>
+
+</head>
+
+<body>
+
+	<div id="circle"></div>
+
+	<div class="box"></div>
+
+	<div class="box"></div>
+
+	<div class="box"></div>
+
+	<div class="box"></div>
+
+	<script>
+
+		// click on circle to fade out all 4 boxes
+		$("#circle").click(function() {
+
+			$(".box").fadeOut();
+
+		});
+
+	</script>
+
+</body>
+</html>
