@@ -6,7 +6,7 @@
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 
-	<script type="text/javascript" src="jquery/jquery.min.js"></script>
+	<script type="text/javascript" src="http://code.jquery.com/jquery.min.js"></script>
 
 	<style>
 
@@ -29,6 +29,35 @@
 		$.get("test.html", function(data) {
 
 			alert(data);
+
+		});
+
+
+		// calling ajax() function, with one variable url 
+		$.ajax({
+			url:"test.html"
+		}).done(function(data) {
+
+			alert(data);
+
+		});
+
+		// changing the h1 header on the site
+		// from of "Asyncronous Javascript And XML" to "Testing AJAX" from the test.html
+		$.ajax({
+			url:"test.html"
+		}).done(function(data) {
+
+			$("h1").html(data);
+
+		});
+
+		// appending content to the existing text
+		$.ajax({
+			url:"test.html"
+		}).done(function(data) {
+
+			$("h1").append(data);
 
 		});
 
