@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Regular expressions</title>
+
+	<meta charset="utf-8" />	
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+	<script type="text/javascript" src="jquery/jquery.min.js"></script>
+
+	<style>
+
+		body {
+
+			font-family:monospace;
+
+		}
+
+	</style>
+
+</head>
+
+<body>
+
+	<script>
+	/*
+	Regular expressions are patterns used to match character combinations in strings. In JavaScript, regular expressions are also objects. These patterns are used with the exec and test methods of RegExp, and with the match, replace, search, and split methods of String.
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions
+	*/ 
+
+		var regex=/great/;
+
+		var string="Regex is great!";
+
+		var result=string.match(regex);
+
+		alert(result);
+
+
+		// case sensitive search; this will return "null"
+		var regex=/great/;
+
+		var string="Regex is Great!";
+
+		var result=string.match(regex);
+
+		alert(result);
+
+		// adding an "i" flag = case insensitive search; this will return "Great"
+		var regex=/great/i;
+
+		var string="Regex is Great!";
+
+		var result=string.match(regex);
+
+		alert(result);
+
+		// adding a "g" flag = global flag; searching for a string that appears in another string many times; e.g. searching for every instance that letter "e" comes up in the sentence "Regex is Great!";
+
+		var regex=/e/g;
+
+		var string="Regex is Great!";
+
+		var result=string.match(regex);
+
+		alert(result);
+
+	</script>
+
+</body>
+</html>
