@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>jQuery UI</title>
+
+	<meta charset="utf-8" />	
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+	<!-- loading jQuery from local server -->
+	<!-- <script type="text/javascript" src="jquery/jquery.min.js"></script> -->
+
+	<!-- search with cdn keyword; CDN = Content Delivery Network; e.g. jquery ui cdn -->	
+	<!-- loading jQuery 1.11.3 library from Google APIS store -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+	<!-- loading jQuery 2.1.4 library from Google APIS store. jQuery 2.x has the same API as jQuery 1.x, but does not support Internet Explorer 6, 7, or 8. -->
+	<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script> -->
+
+	<!-- loading jQueryUI libraries from Google APIS store -->
+	<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+
+</head>
+
+<body>
+
+	<ul>
+
+		<li>Pizza</li>
+		<li>Cheese</li>
+		<li>Bread</li>
+		<li>Pasta</li>
+		<li>Soup</li>
+		<li>Dessert</li>
+		<li>Fruit</li>
+		<li>Vegetable</li>
+
+	</ul>
+
+	<script>
+
+		$("ul").sortable();
+
+	</script>
+
+</body>
+</html>

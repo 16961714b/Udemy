@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>jQuery UI</title>
+
+	<meta charset="utf-8" />	
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+	<!-- loading jQuery from local server -->
+	<!-- <script type="text/javascript" src="jquery/jquery.min.js"></script> -->
+
+	<!-- search with cdn keyword; CDN = Content Delivery Network; e.g. jquery ui cdn -->	
+	<!-- loading jQuery 1.11.3 library from Google APIS store -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+	<!-- loading jQuery 2.1.4 library from Google APIS store. jQuery 2.x has the same API as jQuery 1.x, but does not support Internet Explorer 6, 7, or 8. -->
+	<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script> -->
+
+	<!-- loading jQueryUI libraries from Google APIS store -->
+	<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+
+	<style>
+
+		#draggable {
+
+			height:200px;
+			width:200px;
+			background-color:green;
+			font-family:Helvetica, sans-serif;
+			font-size:1.5em;
+			padding:15px;
+
+		}
+
+		#resizable {
+
+			height:220px;
+			width:220px;
+			background-color:brown;
+			font-family:Helverica, sans-serif;
+			font-size:1.5em;
+			padding:15px;
+
+		}
+
+		#target {
+
+			height:250px;
+			width:250px;
+			background-color:yellow;
+			font-family:Helverica, sans-serif;
+			font-size:1.5em;
+			padding:15px;
+
+		}
+
+	</style>
+
+</head>
+
+<body>
+
+	<div id="draggable">Drag me around!</div>
+
+	<div id="resizable">Resize me if you can!</div>
+
+	<div id="target">Drop it here!</div>
+
+	<script>
+
+		$("#draggable").draggable();
+
+		$("#resizable").resizable();
+
+		$("#target").droppable({
+			drop: function(ui, event) {
+
+				// when the draggable box is moved into yellow target, message will be alerted, and background color will change into red one 
+				alert("dropped!");
+				$("#target").css("background-color", "red");
+
+			}
+
+		});
+
+	</script>
+
+</body>
+</html>
