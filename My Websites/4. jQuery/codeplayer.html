@@ -6,21 +6,108 @@
 	<meta charset="utf-8" />	
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 
-	<script type="text/javascript" src="js/script.js"></script>
+	<link rel="stylesheet" type="text/css" href="styles/style.css" />
 
 	<!-- loading jQuery 1.11.3 library from Google APIS store -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-
-	<!-- loading jQueryUI libraries from Google APIS store -->
-	<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
-	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
 
 </head>
 
 <body>
 
-	<h1>Hello world</h1>
+	<div class="wrapper">
+		<div id="menuBar">
+
+			<div id="logo">			
+				<h1 id="codePlayer">CodePlayer</h1>
+			</div>
+
+			<ul id="toggles">
+				<li class="toggle selected">html</li>
+				<li class="toggle">css</li>
+				<li class="toggle">js</li>
+				<li class="toggle selected">result</li>
+			</ul>
+
+			<div id="buttonDiv">
+				<button id="runButton">run</button>
+			</div>
+
+		</div> <!-- end of menuBar -->
+
+		<!-- Clearing floats -->
+		<div class="clear"></div>
+
+		<div class="codeContainer" id="htmlContainer">
+
+			<div class="codeLabel">html</div>
+			<textarea id="htmlCode">Insert your code here...</textarea>
+
+		</div>
+
+		<div class="codeContainer" id="cssContainer">
+
+			<div class="codeLabel">css</div>
+			<textarea id="cssCode">Insert your code here...</textarea>
+
+		</div>
+
+		<div class="codeContainer" id="jsContainer">
+
+			<div class="codeLabel">js</div>
+			<textarea id="jsCode">Insert your code here...</textarea>
+
+		</div>
+
+		<div class="codeContainer" id="resultContainer">
+
+			<div class="codeLabel">result</div>
+			<iframe id="resultFrame"></iframe>
+
+		</div>
+
+	</div> <!-- end of wrapper -->
 
 
+		<script>
+
+			var windowHeight=$(window).height();
+			var menuBarHeight=$("#menuBar").height();
+
+			var codeContainerHeight=windowHeight-menuBarHeight;
+
+			$(".codeContainer").height(codeContainerHeight+"px");
+
+			$(".toggle").click(function() {
+
+				$(this).toggleClass("selected");
+
+				var activeDiv=$(this).html();
+
+				$("#"+activeDiv+"Container").toggle();
+
+				var showingDivs=$(".codeContainer").filter(function() {
+
+					return($(this).css("display")!="none");
+
+				}).length;
+
+				var width = 100/showingDivs;
+
+				$(".codeContainer").css("width", width+"%");
+
+			});
+
+			$("#runButton").click(function() {
+
+				$("iframe").contents().find("html").html('<style>'+$("#cssCode").val()+'</style>'+$("#htmlCode").val());
+
+				// ***Warning!*** Use .eval() option only for testing purposes in your local machine.
+				// ***Warning!*** Someone could easily exploit your server when you deploy this code live on internet.
+				document.getElementById("resultFrame").contentWindow.eval($("#jsCode").val());
+
+			});
+
+		</script>
 </body>
 </html>
