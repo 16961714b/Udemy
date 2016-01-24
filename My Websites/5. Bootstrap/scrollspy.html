@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Bootstrap components</title>
+    <title>Bootstrap ScrollSpy</title>
 		<!-- This template is available at: https://getbootstrap.com/css/#grid -->
 
     <!-- Bootstrap -->
@@ -32,14 +32,36 @@
 
 			}
 
+			#div1 {
+				background-color: blue;
+				color: white;
+				padding: 10px;
+			}
+
+			#div2 {
+				background-color: red;
+				color: white;
+				padding: 10px;
+			}
+
+			#div3 {
+				background-color: green;
+				color: yellow;
+				padding: 10px;
+			}
+
+			.contentDiv {
+				height: 800px;
+			}
+
 		</style>
 
   </head>
-  <body>
+  <body data-spy="scroll" data-target=".navbar-collapse">
 
 		<!-- Grid system contains 12 sections/columns: 1x12, 2x6, 3x4, 8+4 -->
 
-		<div class="navbar navbar-inverse">
+		<div class="navbar navbar-inverse navbar-fixed-top">
 
 			<div class="container">
 
@@ -68,9 +90,10 @@
 					<ul class="nav navbar-nav">
 
 						<!-- .active class highlights the page in navbar and collapse button -->
-						<li class="active"><a href="">Page 1</a></li>
-						<li><a href="">Page 2</a></li>
-						<li><a href="">Page 3</a></li>
+						<!-- To integrate ScrollSpy, we need to link up the navigation with our divs via internal links "#div1" "#div2" "#div3" -->
+						<li class="active"><a href="#div1">Page 1</a></li>
+						<li><a href="#div2">Page 2</a></li>
+						<li><a href="#div3">Page 3</a></li>
 
 					</ul>
 
@@ -80,74 +103,21 @@
 
 		</div>
 
+			<h4>Hello world!</h4>
+
 		<div class="container">
 
-			<h5>Search glyphicon <span class="glyphicon glyphicon-search"></span></h5>
+			<!-- ScrollSpy shows the users via navbar -changing the icons at the top- where they are currently located on a webpage -->
 
-			<br />
+			<!-- ScrollSpy is of no use if the navbar disappears, when the user scrolls down. We can fix this with bootstrap by giving the navbar "navbar-fixed-top" class property -->
 
-			<h5>Styling the Calendar glyphicon</h5><span class="glyphicon glyphicon-calendar large-blue"></span>
+			<!-- To integrate ScrollSpy, we need to link up the navigation with our divs & add data-spy="scroll" data-target=".navbar-collapse" to the body tag -->
 
-			<br />
-			<br />
+			<div id="div1" class="contentDiv">Content of div1</div>
 
+			<div id="div2" class="contentDiv">Content of div2</div>
 
-			<!-- Styling the form with Bootstrap glyphicons -->
-			<div class="input-group">
-
-				<span class="glyphicon glyphicon-comment input-group-addon"></span>
-				<input class="form-control" type="text" placeholder="comment here..." />
-
-			</div>
-
-			<div class="input-group">
-
-				<span class="glyphicon glyphicon-euro input-group-addon"></span>
-				<input class="form-control" type="text" placeholder="please insert the amount here..." /><span class="input-group-addon">.00</span>
-
-			</div>
-
-			<div class="input-group">
-
-				<span class="input-group-addon">@</span>
-				<input class="form-control" type="text" placeholder="please insert your email here..." />
-
-			</div>
-
-			<br />
-			<br />
-
-			<!-- buttons -->
-
-			<button type="button" class="btn btn-success"><span class="glyphicon glyphicon-calendar"></span> Calendar</button>
-
-			<!-- alerts -->
-
-			<div class="alert alert-success">
-
-				You've done it! Congrats!
-
-			</div>
-
-			<div class="alert alert-danger alert-dismissable">
-
-				<button type="button" class="close" data-dismiss="alert">x</button>
-
-				You've done it! Careful next time!
-			</div>
-
-
-			<!-- list-groups and badges -->
-
-			<ul class="list-group">
-
-				<li class="list-group-item">Inbox<span class="badge">12</span></li>
-				<li class="list-group-item">Sent<span class="badge">42</span></li>
-				<li class="list-group-item">Draft<span class="badge">7</span></li>
-				<li class="list-group-item">Spam<span class="badge">666</span></li>
-				<li class="list-group-item">Trash<span class="badge">0</span></li>
-
-			</ul>
+			<div id="div3" class="contentDiv">Content of div3</div>
 
 		</div> <!-- end of container -->
 

@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Bootstrap components</title>
+    <title>Bootstrap Modal</title>
 		<!-- This template is available at: https://getbootstrap.com/css/#grid -->
 
     <!-- Bootstrap -->
@@ -82,72 +82,47 @@
 
 		<div class="container">
 
-			<h5>Search glyphicon <span class="glyphicon glyphicon-search"></span></h5>
-
-			<br />
-
-			<h5>Styling the Calendar glyphicon</h5><span class="glyphicon glyphicon-calendar large-blue"></span>
-
-			<br />
-			<br />
+			<h4>Hello world!</h4>
 
 
-			<!-- Styling the form with Bootstrap glyphicons -->
-			<div class="input-group">
+			<!-- Modals are a great way to alert the user to either login or to bring an important message -->
+			<!-- Content of Bootstrap Modal is by default hidden -->
+			<button class="btn btn-success" data-toggle="modal" data-target="#myModal">Launch Modal</button>
 
-				<span class="glyphicon glyphicon-comment input-group-addon"></span>
-				<input class="form-control" type="text" placeholder="comment here..." />
+			<div class="modal" id="myModal">
 
-			</div>
+			<!-- To change the size of the modal you can add an extra class of "modal-sm" if you want a particularly small modal, e.g. mobile screens -->
+				<div class="modal-dialog">
 
-			<div class="input-group">
+					<div class="modal-content">
 
-				<span class="glyphicon glyphicon-euro input-group-addon"></span>
-				<input class="form-control" type="text" placeholder="please insert the amount here..." /><span class="input-group-addon">.00</span>
+						<div class="modal-header">
 
-			</div>
+							<button class="close" data-dismiss="modal">x</button>
 
-			<div class="input-group">
+								<h4 class="modal-title">Hello from Modal!</h4>
 
-				<span class="input-group-addon">@</span>
-				<input class="form-control" type="text" placeholder="please insert your email here..." />
+						</div>
 
-			</div>
+						<div class="modal-body">
 
-			<br />
-			<br />
+							This is a modal-body.
 
-			<!-- buttons -->
+						</div>
 
-			<button type="button" class="btn btn-success"><span class="glyphicon glyphicon-calendar"></span> Calendar</button>
+						<!-- This part of the modal is usually used to put some buttons, e.g. save, continue, I accept, etc. -->
+						<div class="modal-footer">
 
-			<!-- alerts -->
+							<button class="btn btn-default" data-dismiss="modal">Close</button>
+							<button class="btn btn-success">Save changes</button>
 
-			<div class="alert alert-success">
+						</div>
 
-				You've done it! Congrats!
+					</div>
+
+				</div>
 
 			</div>
-
-			<div class="alert alert-danger alert-dismissable">
-
-				<button type="button" class="close" data-dismiss="alert">x</button>
-
-				You've done it! Careful next time!
-			</div>
-
-
-			<!-- list-groups and badges -->
-
-			<ul class="list-group">
-
-				<li class="list-group-item">Inbox<span class="badge">12</span></li>
-				<li class="list-group-item">Sent<span class="badge">42</span></li>
-				<li class="list-group-item">Draft<span class="badge">7</span></li>
-				<li class="list-group-item">Spam<span class="badge">666</span></li>
-				<li class="list-group-item">Trash<span class="badge">0</span></li>
-
-			</ul>
 
 		</div> <!-- end of container -->
 
